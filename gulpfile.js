@@ -61,13 +61,19 @@ gulp.task('images', function () {
         .pipe(gulp.dest('dist/assets/img'));
 });
 
-// 6. Copying just the fonts from 'app' to 'dest'
+// 6. Copying the fonts from 'app' to 'dest'
 gulp.task('fonts', function () {
 	return gulp.src(['app/assets/fonts/*'])
 	.pipe(gulp.dest('dist/assets/fonts'))
 });
 
-// 7. Copying all the other files from 'app' to 'dest'
+// 7. Copying bower components if you have them from 'app' to 'dest'
+gulp.task('fonts', function () {
+	return gulp.src(['app/components/**/*'])
+	.pipe(gulp.dest('dist/components'))
+});
+
+// 8. Copying all the other files from 'app' to 'dest'
 gulp.task('copy', function () {
   return gulp.src([
     'app/*',
