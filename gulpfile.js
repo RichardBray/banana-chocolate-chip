@@ -13,9 +13,10 @@ var gulp = require('gulp'),
 	minifyHTML = require('gulp-minify-html');
 	imagemin = require('gulp-imagemin');
 	pngcrush = require('imagemin-pngcrush');
+	uncss = require('gulp-uncss');
 
 // 1. Webserver
-gulp.task('webserver', function() {
+gulp.task('webserver', function () {
 	gulp.src('dist/')
 	.pipe(webserver({
 		livereload: true,
@@ -43,7 +44,7 @@ gulp.task('scripts', function () {
 });
 
 // 4. HTML Minification
-gulp.task('html', function() {
+gulp.task('html', function () {
 	var opts = {comments:true,spare:true};
 	gulp.src('app/**/*.html')
 	.pipe(minifyHTML(opts))
@@ -75,13 +76,24 @@ gulp.task('fonts', function () {
 
 // 8. Copying all the other files from 'app' to 'dest'
 gulp.task('copy', function () {
-  return gulp.src([
-    'app/*',
-    '!app/*.html', //needed for html minification
-    '!app/Gemfile'
-  ], {
-    dot: true
-  }).pipe(gulp.dest('dist'))
+	  return gulp.src([
+	    'app/*',
+	    '!app/*.html', //needed for html minification
+	    '!app/Gemfile'
+	  ], {
+	    dot: true
+	}).pipe(gulp.dest('dist'));
+});
+
+
+// 9. Removing the unused classes in your css (optional)
+gulp.task('uncss', function () {
+    return gulp.src('dist/assets/styles/style.min.css')
+        .pipe(uncss({
+            html: ['app/index.html']
+        }))
+		.pipe(minifyCSS())
+        .pipe(gulp.dest('dist/assets/styles/'));
 });
 
 // Watching files for changes
@@ -94,5 +106,4 @@ gulp.task('watch', function () {
 
 
 gulp.task('default', ['webserver','copy', 'html', 'styles', 'fonts', 'scripts', 'images', 'watch']);
-
-
+gulp.task('chkcss', ['webserver', 'uncss']); //checks if uncss worked
