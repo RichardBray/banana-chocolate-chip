@@ -1,0 +1,17 @@
+{
+  "name": "banana-chocolate-chip",
+  "version": "0.1.0",
+  "homepage": "https://github.com/RichardBray/banana-chocolate-chip",
+  "description": "frontend framework",
+  "main": "index.html",
+  "private": true,
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "app/components/"
+  ],
+  "dependencies": {
+    "bootstrap-sass-official": "~3.3.1",
+    "jquery": "latest"
+  }
+}

@@ -37,7 +37,10 @@ gulp.task('styles', function () {
 
 // 3. JS Minificaiton and concatination
 gulp.task('scripts', function () {
-	gulp.src('app/scripts/*.js')
+	gulp.src([
+			'app/components/jquery/dist/jquery.js',
+			'app/scripts/*.js'
+		])
 		.pipe(concat("script.min.js"))
 		.pipe(uglify())
 		.pipe(gulp.dest('dist/scripts'))
@@ -68,8 +71,8 @@ gulp.task('fonts', function () {
 	.pipe(gulp.dest('dist/assets/fonts'))
 });
 
-// 7. Copying bower components if you have them from 'app' to 'dest'
-gulp.task('fonts', function () {
+// 7. Copying bower components if you have them from 'app' to 'dest' **optional**
+gulp.task('components', function () {
 	return gulp.src(['app/components/**/*'])
 	.pipe(gulp.dest('dist/components'))
 });
@@ -86,7 +89,7 @@ gulp.task('copy', function () {
 });
 
 
-// 9. Removing the unused classes in your css (optional)
+// 9. Removing the unused classes in your css **optional**
 gulp.task('uncss', function () {
     return gulp.src('dist/assets/styles/style.min.css')
         .pipe(uncss({

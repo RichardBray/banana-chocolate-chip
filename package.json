@@ -1,7 +1,7 @@
 {
-  "name": "muffin-app",
+  "name": "banana-chocolate-chip",
   "description": "your site description goes here",
-  "version": "0.0.1",
+  "version": "0.1.0",
   "private": true,
   "devDependencies": {
     "gulp-util": "^2.2.13",

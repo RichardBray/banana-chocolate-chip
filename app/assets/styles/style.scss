@@ -1,4 +1,14 @@
-@import "boot/bootstrap.scss";
-@import "bricks/bricks.scss"; //optional
-@import "cms/color-me-sass.scss";
-@import "custom.scss"; //Custom Style
+//bootstrap
+// --------------------------------------
+@import "bootstrap.scss";
+// @import "../../components/bootstrap-sass-official/assets/stylesheets/bootstrap.scss"; Getting bootstrap-sass-official via bower?
+
+//optional
+// --------------------------------------
+@import "bricks.scss";
+@import "color-me-sass.scss";
+@import "ionicons.scss";
+
+//custom
+// --------------------------------------
+@import "custom.scss";
