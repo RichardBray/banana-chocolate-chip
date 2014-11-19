@@ -16,7 +16,6 @@
     "gulp-minify-html": "^0.1.6",
     "gulp-imagemin": "^1.2.1",
     "imagemin-pngcrush": "^4.0.0",
-    "gulp-uncss": "^0.5.1",
-    "psi": "^0.1.2",
+    "gulp-uncss": "^0.5.1"
   }
 }

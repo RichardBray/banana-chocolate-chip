@@ -37,10 +37,10 @@ gulp.task('styles', function () {
 
 // 3. JS Minificaiton and concatination
 gulp.task('scripts', function () {
-	gulp.src('app/assets/scripts/*.js')
+	gulp.src('app/scripts/*.js')
 		.pipe(concat("script.min.js"))
 		.pipe(uglify())
-		.pipe(gulp.dest('dist/assets/scripts'))
+		.pipe(gulp.dest('dist/scripts'))
 });
 
 // 4. HTML Minification
@@ -99,11 +99,11 @@ gulp.task('uncss', function () {
 // Watching files for changes
 gulp.task('watch', function () {
 	gulp.watch('app/assets/styles/*.scss', ['styles']);
-	gulp.watch('app/assets/scripts/*.js', ['scripts']);
+	gulp.watch('app/scripts/*.js', ['scripts']);
 	gulp.watch('app/assets/img/**/*', ['images']);
 	gulp.watch('app/**/*.html', ['html']);
 });
 
 
-gulp.task('default', ['webserver','copy', 'html', 'styles', 'fonts', 'scripts', 'images', 'watch']);
-gulp.task('chkcss', ['webserver', 'uncss']); //checks if uncss worked
+gulp.task('default', ['copy', 'html', 'styles', 'fonts', 'scripts', 'images', 'watch','webserver']);
+gulp.task('chkcss', ['uncss', 'webserver']); //checks if uncss worked
