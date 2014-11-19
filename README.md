@@ -5,17 +5,21 @@ A framework for modern web apps based on [Muffin](http://richbray.me/muffin/)
 
 ##INSTALL
 
-1. Install the dependancies
+**Important make sure you've installed Ruby on Rails & Nodejs**
+
+Install the dependancies
 
 ```
 npm install
 ```
 
 
-2. Run gulp
+Run gulp
 
 ```
 gulp
 ```
+
+That's it.
 
 
