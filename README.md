@@ -7,11 +7,15 @@ A framework for modern web apps based on [Muffin](http://richbray.me/muffin/)
 
 1. Install the dependancies
 
-	npm install
+```
+npm install
+```
 
 
 2. Run gulp
 
-	gulp
+```
+gulp
+```
 
 
