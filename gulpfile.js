@@ -77,11 +77,12 @@ gulp.task('components', function () {
 	.pipe(gulp.dest('dist/components'))
 });
 
-// 8. Copying all the other files from 'app' to 'dest'
+// 8. Copying all the other files from 'app' to 'dest' 
 gulp.task('copy', function () {
 	  return gulp.src([
 	    'app/*',
 	    '!app/*.html', //needed for html minification
+	    '!app/components', //add 'components to default task if you want it copied over'
 	    '!app/Gemfile'
 	  ], {
 	    dot: true
