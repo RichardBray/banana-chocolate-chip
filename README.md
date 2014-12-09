@@ -1,6 +1,6 @@
 
 
-![Alt text](/path/to/img.jpg)
+![Banana Chocolate Chip title](http://richbray.me/bcc/github-img.png)
 
 
 Front-end framework for modern web apps powered by [Gulp](http://gulpjs.com/), based on [Muffin](http://richbray.me/muffin/) & [WSK](https://developers.google.com/web/starter-kit/)
