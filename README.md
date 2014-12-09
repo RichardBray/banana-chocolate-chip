@@ -32,11 +32,42 @@ That's it.
 
 [Watch Video](https://www.youtube.com/watch?v=scqj4UvQ6bo "Banana Chocolate Chip Features") 
 
-###1. HTML, CSS & JS minification
+**1. HTML, CSS & JS minification**
 
 Minifies all the things to help with website performance.
 
 
-###2. Image Compression
+**2. Image Compression**
 
 Compresses PNG, JPEG, GIF and SVG images with gulp-imagemin.
+
+
+**3. SASS Preprocessing**
+
+Don't worry BCC uses Ruby to compile Sass, the node one isn't quite there yet.
+
+
+**4. Uncss**
+
+This removes all the unused css clases in your stylesheet.
+
+
+**5. Bootstrap & Ionicons**
+
+Optional of course but it comes baked with the lastes Bootstrap and Ionicons.
+
+
+**6. HTTP Server**
+
+Automatically runs a http server, basically making it JS framework ready.
+
+
+**7. Color me Sass & Bricks**
+
+Making it easier to write reusable css with CMS & Bricks.
+
+**8. Bower Support**
+
+Keep up to date with all the packages you plan to install, like... JQuery?
+
+
