@@ -1,3 +1,7 @@
+
+
+![Banana Chocolate Chip Logo](http://richbray.me/bcc/img/muffin_logo.svg)
+
 Banana Chocolate Chip (Muffin)
 ==============================
 
