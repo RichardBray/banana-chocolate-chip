@@ -1,11 +1,9 @@
 
 
-<img src="http://richbray.me/bcc/img/muffin_logo.svg" alt="Banana Chocolate Chip Logo" style="max-width:10em">
+![Alt text](/path/to/img.jpg)
 
-Banana Chocolate Chip (Muffin)
-==============================
 
-A framework for modern web apps based on [Muffin](http://richbray.me/muffin/)
+Front-end framework for modern web apps powered by [Gulp](http://gulpjs.com/), based on [Muffin](http://richbray.me/muffin/) & [WSK](https://developers.google.com/web/starter-kit/)
 
 ##INSTALL
 
