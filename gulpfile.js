@@ -8,11 +8,11 @@ var gulp = require('gulp'),
 	minifyCSS = require('gulp-minify-css'),
 	concat = require('gulp-concat'),
 	webserver = require('gulp-webserver'),
-	uglify = require('gulp-uglify');
-	rename = require('gulp-rename');
-	minifyHTML = require('gulp-minify-html');
-	imagemin = require('gulp-imagemin');
-	pngcrush = require('imagemin-pngcrush');
+	uglify = require('gulp-uglify'),
+	rename = require('gulp-rename'),
+	minifyHTML = require('gulp-minify-html'),
+	imagemin = require('gulp-imagemin'),
+	pngcrush = require('imagemin-pngcrush'),
 	uncss = require('gulp-uncss');
 
 // 1. Webserver
