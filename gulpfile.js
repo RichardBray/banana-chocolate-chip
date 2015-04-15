@@ -26,8 +26,7 @@ gulp.task('webserver', function () {
 
 // 2. SASS Minification and conversion to CSS
 gulp.task('styles', function () {
-    gulp.src('app/assets/styles/*.scss')
-        .pipe(sass())
+    return sass('app/assets/styles/*.scss')
 		.on('error', function (err) { console.log(err.message); })
         .pipe(prefix("last 1 version", "> 1%", "ie 8", "ie 7"))
         .pipe(minifyCSS())
